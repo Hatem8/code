@@ -1,0 +1,161 @@
+<!doctype html>
+<title>Task 1</title>
+<style>
+:root{
+  --white:#fff;
+  --brown:#FFE4B5;
+  --bbrown:#BA956E;
+}
+.flex-head {
+  display: flex;
+  flex-direction : row;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: #255A5B;
+  color: var(--white);
+  
+}
+*{
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Lato' , sans-serif;
+}
+.flex-body {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(hero.jpg);
+  -webkit-mask-image: radial-gradient(circle,black 50%,rgba(0,0,0,0.5)50%);
+  mask-image:  radial-gradient(circle,black 50%,rgba(0,0,0,0.5)50%);
+  background-size: 100%;
+  color: var(--white);
+  gap: 10px;
+}
+.flex-dishes{
+  height: 50vh;
+  display: flex;
+  flex-direction : row;
+  justify-content: center ;
+  flex-wrap: wrap;
+  gap: 60px;
+  background-color: var(--brown);
+  
+  
+}
+.flex-featured{
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--brown);
+}
+
+.button:hover{
+ 
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,5), 0 17px 50px 0 rgba(0,0,0,5);
+}
+.link{
+  margin: 30px; 
+  color:var(--white); 
+  text-decoration: none;
+  font-size: 20px; 
+}
+.link:hover{
+  color: var(--brown);
+  text-decoration: underline;
+}
+.flex-footer{
+  height: 10vh;
+  display: flex;
+flex-direction: row;
+background-color: var(--brown);
+justify-content: center;
+gap: 5px;
+align-content: flex-end;
+
+}
+.home-img{
+  width: 350px;
+  height: 300px;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--bbrown);
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position:absolute;
+  left: 43.4%;
+  top: 114.45%;
+  fill: none;
+  stroke: var(--white);
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 2s ease-in-out;
+}
+
+.btn:hover {
+  transition: 2s ease-in-out;
+  background: var(--bbrown);
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+.btn span {
+  color: black;
+  font-size: 22px;
+  font-weight: 200;
+}
+
+</style>
+
+
+<head>
+  
+</head>
+
+<body>
+  <div class="flex-head" >
+    <a class="link" href = "Home.html"  > Home </a>
+    <a class="link" href="" > About Us </a>
+    <a class="link" href=""  > Menu </a>
+    <a class="link" href = ""  > Contact us </a>
+  </div> 
+  
+  <div class="flex-body" >
+    <p style="font-size: 30px; text-shadow: 2px 2px #255A5B;" id="welcometext"> Welcome </p>
+    <button class="button" type="button" style=" padding: 10px ;
+    background-color: var(--bbrown);
+     font-size: larger;
+      color: var(--white);" > View our Specials </button> 
+  </div>
+  <div class = "flex-featured">
+    <button class="btn">
+      <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+      </svg>
+      <span>Feature Dishes</span>
+    </button>
+  <div class = "flex-dishes" style="margin: 1%;">
+    <div>  <img class="home-img" src="pasta.jpg" alt="pasta"   > </div>
+   <div> <img class="home-img" src="pizza.jpg" alt="pizza" > </div>
+    <div>  <img class="home-img" src="salmon.jpg" alt="salmon" > </div>
+  </div>
+  </div>
+  <div class="flex-footer">
+    <p style="margin-top: 18px; font-size: 20px;"> All rights reserverd </p> 
+  </div>
+</body>
+
+<html>
