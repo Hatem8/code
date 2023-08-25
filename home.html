@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+  <style>
+
+    .decorative-section {
+      position: relative;
+      padding: 40px;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin: 20px;
+    }
+    
+    .decorative-section::before,
+    .decorative-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      background-color: #4CAF50;
+    }
+    
+    .decorative-section::before {
+      left: -50px;
+      transform: rotate(45deg);
+    }
+    
+    .decorative-section::after {
+      right: -50px;
+      transform: rotate(-45deg);
+    }
+    
+    .decorative-section h2 {
+      margin-bottom: 20px;
+    }
+    
+    .decorative-section p {
+      color: #777;
+    }
+    
+    /* CSS styles for the card flip */
+    .card-container {
+      perspective: 1000px;
+      width: 200px;
+      height: 260px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+    
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+    
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    
+    .card-front {
+      background-color: #4CAF50;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .card-back {
+      background-color: #f5f5f5;
+      color: #333;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+     /* CSS styles for the button */
+     .custom-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      cursor: not-allowed;
+      position: relative;
+      margin:20px;
+    }
+    
+
+  </style>
+    <script>
+        // JavaScript to toggle card flip
+        function flipCard() {
+          var card = document.getElementById("card");
+          card.classList.toggle("flipped");
+        }
+      </script>
+    
+</head>
+<body>
+   
+  <div class="decorative-section">
+    <h2>Welcome to our Website</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="card-container">
+    <div id="card" class="card" onclick="flipCard()">
+      <div class="card-face card-front">
+        Front Side
+      </div>
+      <div class="card-face card-back">
+        Back Side
+      </div>
+    </div>
+  </div>
+  <button class="custom-button">Button with Custom Cursor </button>
+
+</body>
+</html>
